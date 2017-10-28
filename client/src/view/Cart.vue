@@ -144,7 +144,7 @@
     export default {
         data(){
             return{
-                cartList:'',
+                cartList:[],
                 modalConfirm:false,
                 productId:'',
             }
@@ -213,15 +213,16 @@
 
             },
             toggleCheckAll(){
-                let flag = !this.checkedAllFlag;
-
-                this.cartList.forEach(item=>{
-                    item.checked = flag ? 1 : 0;
+                    let flag = !this.checkedAllFlag;
+                    // console.log(this.cartList);
+                    this.cartList.forEach((item)=>{
+                        // console.log(item);
+                        item.checked = flag ? 1 : 0;
+                    this.$http.post('/users/editCheckAll',{checkAll:item.checked}).then(res=>{
+                        // console.log(res);
+                    })
                 })
 
-                this.$http.post('/users/editCheckAll',{checkAll:item.checked}).then(res=>{
-                    // console.log(res);
-                })
             },
             delCartConfirm(item){
                 this.productId = item.productId;
