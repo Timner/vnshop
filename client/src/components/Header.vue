@@ -10,7 +10,7 @@
                         <a class="btn-category-list" href="catalog.php" style="display:none;">全部商品分类</a>
                     </li>
                     <li class="nav-item">
-                        <a class="link" href="category.php?id=76"><span>电子产品</span></a>
+                        <!-- <a class="link" href="category.php?id=76"><span>电子产品</span></a> -->
                         <div class='item-children'>
                             <div class="container">
                                 <ul class="children-list clearfix">
@@ -51,7 +51,7 @@
         <!-- 登录框 -->
       <div class="md-modal modal-msg md-modal-transition " :class="{'md-show':loginModalFlag}">
         <div class="md-modal-inner">
-          <div class="md-top">
+          <div class="md-top"> n 
             <div class="md-title" >用户登录</div>
             <button class="md-close" @click="loginModalFlag = false">关闭</button>
           </div>
